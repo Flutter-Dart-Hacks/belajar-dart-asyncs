@@ -4,7 +4,7 @@ Future<String> getName() async {
   return Future.delayed(Duration(seconds: 2), () => "Eko Khannedy");
 }
 
-void main(){
+void main() {
   test("Future Matcher", () {
     final name = getName();
     expect(name, completion(equals("Eko Khannedy")));

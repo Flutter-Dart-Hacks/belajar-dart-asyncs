@@ -37,7 +37,7 @@ class BookService {
     }
   }
 
-  void delete(String id){
+  void delete(String id) {
     var book = bookRepository.findById(id);
     if (book == null) {
       throw Exception("Book not found");
