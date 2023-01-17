@@ -16,11 +16,15 @@ Future<void> numbers(Parameter parameter) async {
   Isolate.exit();
 }
 
-void main(){
+void main() {
   final receivePort = ReceivePort();
   Isolate.spawn(numbers, Parameter("Eko", receivePort.sendPort));
 
-  receivePort.take(5).listen((message) {print(message);});
+  receivePort.take(5).listen((message) {
+    print(message);
+  }).onDone(() {
+    print("Selesai listen");
+  });
 
   print("Done");
 }

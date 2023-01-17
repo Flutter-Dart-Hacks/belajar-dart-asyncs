@@ -8,7 +8,7 @@ void longRunningTask(
       .then((value) => onDone("Task Completed"));
 }
 
-Future<String> runLongRunningTask(){
+Future<String> runLongRunningTask() {
   Completer<String> completer = Completer();
 
   longRunningTask((data) {
@@ -21,8 +21,7 @@ Future<String> runLongRunningTask(){
 }
 
 void main() {
-  runLongRunningTask()
-      .then((value) => print(value));
+  runLongRunningTask().then((value) => print(value));
 
   print("Done");
 }
