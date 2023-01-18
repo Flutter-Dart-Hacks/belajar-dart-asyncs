@@ -27,7 +27,8 @@ Stream<String> runLongRunningStream() {
 }
 
 void main() {
-  runLongRunningStream()
-      .listen((event) {print(event);});
+  runLongRunningStream().listen((event) {
+    print(event);
+  });
   print("Done");
 }

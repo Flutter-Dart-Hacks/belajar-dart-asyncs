@@ -8,6 +8,7 @@ void longRunningTask(
       .then((value) => onDone("Task Completed"));
 }
 
+// Untuk library yang menggunakan callback
 Future<String> runLongRunningTask() {
   Completer<String> completer = Completer();
 
